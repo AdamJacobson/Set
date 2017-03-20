@@ -1,0 +1,68 @@
+.card {
+	background: #ECECEC;
+	border-radius: 10px;
+	min-height: 100px;
+	max-height: 10%;
+	margin: 6% 1%;
+}
+
+.row {
+	border: 1px solid blue;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.shape {
+	margin: 0 5px;
+	display: inline-block;
+	background: repeating-linear-gradient(
+		45deg,
+		#606dbc,
+		#606dbc 10px,
+		#465298 10px,
+		#465298 20px
+	)
+}
+
+.box {
+	width: 50px;
+	height: 50px;
+	border-bottom: 50px solid red;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+}
+
+.triangle {
+	width: 0;
+	height: 0;
+	border-bottom: 50px solid red;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+}
+
+.test:before {
+  display: block; /* to be able to apply width/ height/ transform */
+  width: inherit; height: inherit;
+  transform: skewY(-30deg) rotate(60deg) translate(50%);
+  background: repeating-linear-gradient(
+		-60deg,
+		red,
+		red 5px,
+		white 5px,
+		white 10px
+	);
+  background-size: cover;
+  content: '';
+}
+
+.test {
+	<!-- background: linear-gradient(to bottom, #ffffff 0%,#0e0e0e 100%); -->
+	transform:skew(-30deg) scaleY(.8666); /* .8666 = cos(30deg) */  
+	background:transparent;
+	overflow: hidden;
+	margin: 0 auto;
+	outline: solid 1px red;
+	width: 43.3px; /* width = height*sqrt(3)/2 */ 
+	height: 50px;
+	transform: rotate(-90deg) skewY(30deg);
+}
